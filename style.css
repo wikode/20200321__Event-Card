@@ -1,0 +1,115 @@
+/* Reset global : */
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Déclaration des variables pour les couleurs : */
+:root{
+    --orange: rgb(228,116,51);
+    --noir: rgb(34,34,34);
+    --text: rgba(236,236,236,.9);
+    --gris-fonce: rgba(179, 179, 179, .7);
+}
+
+/* Design Général */
+body{
+    background: var(--gris-clair);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Design de la carte */
+.event{
+    background: var(--noir);
+    box-shadow: 0 0 20px var(--noir);
+    height: auto;
+    width: 800px;
+    border-radius: 3px;
+    display: flex;
+    align-items: flex-start;
+    padding: 40px 60px;
+}
+
+/* Design de la partie date sur la gauche de la carte */
+.event__date{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--orange);
+    padding-right: 30px;
+}
+
+.event__date--day{
+    font-size: 80px;
+    font-weight: 300;
+}
+
+.event__date--month{
+    text-transform: uppercase;
+    margin-top: -10px;
+    font-size: 25px;
+}
+
+.event__date--year{
+    margin-top: -4px;
+    font-size: 25px;
+}
+
+
+/* Design de la partie texte / informations, sur la droite de la carte */
+.event__description{
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.event__description--title{
+    font-size: 32px;
+    margin-bottom: 12px;
+    padding-bottom: 3px;
+    border-bottom: 3px solid var(--orange);
+    font-weight: 700;
+}
+
+.event__description--location{
+    color: var(--gris-fonce);
+    font-style: italic;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.event__description--text{
+    margin-bottom: 20px;
+}
+
+/* Design du bouton */
+.event__btn{
+    color: var(--text);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    background-color: var(--orange);
+    align-self: flex-start;
+    box-shadow: 0 3px 5px rgba(0,0,0,.4);
+    transition: all .2s;
+}
+
+.event__btn:hover{
+    background-color: var(--noir);
+    box-shadow: 0 3px 10px rgba(228,116,51,.8);
+    transform: translateY(-2px);
+    color: var(--orange);
+}
